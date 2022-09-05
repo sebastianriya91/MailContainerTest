@@ -32,3 +32,13 @@ You should add suitable tests into the MailContainerTest.Test project.
 
 There are no additional constraints, use the packages and approach you feel appropriate, aim to spend no more than 2 hours. Please update the readme with specific comments on any areas that are unfinished and what you would cover given more time.
 
+### Dev Work : Author: Riya Sebastian
+
+SOLID Principles:
+
+1. Interface Segregation: Created IContainerDataStore and made BackUp & Mail CDS to inherit
+2. Single Responsibility Principle - Refactored MailTransferService & extracted the logic to decide the mail container data store to Factory. Initialized this factory in constructor 
+3. Dependency injection - Made service loosely coupled to  data store factory by constructor injection (Dependency injection). No instantiation in ctor/ method
+
+TDD:
+Unit test for service & factory
