@@ -1,13 +1,8 @@
 ﻿using MailContainerTest;
-using MailContainerTest.Data;
 using MailContainerTest.Services;
+using MailContainerTest.Strategy;
 using MailContainerTest.Types;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MailContainer.Tests
 {
@@ -17,13 +12,15 @@ namespace MailContainer.Tests
         private MakeMailTransferRequest request;
         // To-Do convert to use MOQ
         private IMailStoreFactory _mailStoreFactory;
+        private IMailProcessorStrategy _mailProcessorStrategy;
 
         [SetUp]
         public void Setup()
         {
             // Use MOQ set up
             _mailStoreFactory = new MailStoreFactory();
-            subject = new MailTransferService(_mailStoreFactory);
+            _mailProcessorStrategy = new MailProcessorStrategy();
+            subject = new MailTransferService(_mailStoreFactory, _mailProcessorStrategy);
             request = new MakeMailTransferRequest
             {
                 SourceMailContainerNumber = "TW13",
