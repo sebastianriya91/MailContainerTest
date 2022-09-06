@@ -33,8 +33,38 @@ namespace MailContainer.Tests
         }
 
         [Test]
-        public void GivenLargeLetter_WhenMakeMailTransfer_ThenMustReturnFailure()
+        public void GivenLargeLetterWithOverCapacity_WhenMakeMailTransfer_ThenMustReturnFailure()
         {
+            // When
+            var result = subject.MakeMailTransfer(request);
+
+            // Then
+            Assert.NotNull(result);
+            Assert.That(result.GetType(), Is.EqualTo(typeof(MakeMailTransferResult)));
+            Assert.That(result.Success, Is.EqualTo(false));
+        }
+
+        [Test]
+        public void GivenSmallParcel_WhenMakeMailTransfer_ThenMustReturnFailure()
+        {
+            // Given
+            request.MailType = MailType.SmallParcel;
+
+            // When
+            var result = subject.MakeMailTransfer(request);
+
+            // Then
+            Assert.NotNull(result);
+            Assert.That(result.GetType(), Is.EqualTo(typeof(MakeMailTransferResult)));
+            Assert.That(result.Success, Is.EqualTo(false));
+        }
+
+        [Test]
+        public void GivenStandardLetter_WhenMakeMailTransfer_ThenMustReturnFailure()
+        {
+            // Given
+            request.MailType = MailType.StandardLetter;
+
             // When
             var result = subject.MakeMailTransfer(request);
 

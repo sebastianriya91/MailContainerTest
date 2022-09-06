@@ -4,7 +4,7 @@ using MailContainerTest.Types;
 
 namespace MailContainer.Tests
 {
-    public class MailStoreFactoryTests
+    public class MailProcessorStrategyTests
     {
         private MailStoreFactory subject;
 

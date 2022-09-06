@@ -2,7 +2,7 @@
 
 namespace MailContainerTest.Strategy
 {
-    internal class LargeLetterMailProcessor: IMailProcessor
+    public class LargeLetterMailProcessor: IMailProcessor
     {
         public bool IsSuccessfull(MailContainer mailContainer, int numberOfMailItems)
         {
