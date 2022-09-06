@@ -13,6 +13,7 @@ namespace MailContainerTest.Strategy
     }
     public class MailProcessorStrategy : IMailProcessorStrategy
     {
+        // decides the mail Processor
         public IMailProcessor GetMailProcessor(MailType type)
         {
             switch (type)

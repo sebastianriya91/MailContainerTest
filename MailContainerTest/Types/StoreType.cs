@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MailContainerTest.Types
 {
+    //New Enum
     public enum StoreType
     {
         Backup = 0,
