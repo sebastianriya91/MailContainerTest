@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailContainerTest.Tests", "MailContainerTest.Tests\MailContainerTest.Tests.csproj", "{316578EC-C391-4609-B5EE-F68C58023338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailContainer.Tests", "MailContainer.Tests\MailContainer.Tests.csproj", "{F913F646-8C66-4ACE-A884-321D0B5F9D6F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +26,6 @@ Global
 		{316578EC-C391-4609-B5EE-F68C58023338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{316578EC-C391-4609-B5EE-F68C58023338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{316578EC-C391-4609-B5EE-F68C58023338}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F913F646-8C66-4ACE-A884-321D0B5F9D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F913F646-8C66-4ACE-A884-321D0B5F9D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F913F646-8C66-4ACE-A884-321D0B5F9D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F913F646-8C66-4ACE-A884-321D0B5F9D6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
