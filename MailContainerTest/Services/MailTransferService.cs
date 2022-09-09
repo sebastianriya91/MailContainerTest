@@ -16,6 +16,15 @@ namespace MailContainerTest.Services
             _mailStoreFactory = mailStoreFactory;
             _mailProcessorStrategy = mailProcessorStrategy;
         }
+
+        /// <summary>
+        /// 1. Decides the container store based on store type [Main,Backup]
+        /// 2. Based on store, mail container is created
+        /// 3. Using strategy, Mail Processor object is retreived (based on Mail type) and IsSuccessful method is called on the processor object.
+        /// 4. Is successful, capacity of the given container is reduced
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public MakeMailTransferResult MakeMailTransfer(MakeMailTransferRequest request)
         {
             // Store type converted to enum

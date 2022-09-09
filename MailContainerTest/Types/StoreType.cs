@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace MailContainerTest.Types
 {
-    //New Enum
+/// <summary>
+/// Store type defines weather the mailContainerStore is Backup or Main
+/// </summary>
     public enum StoreType
     {
         Backup = 0,

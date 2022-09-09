@@ -9,6 +9,12 @@ namespace MailContainerTest.Strategy
 {
     public class StandardLetterMailProcessor: IMailProcessor
     {
+        /// <summary>
+        /// Processes Standard Letter mail and returns IsSuccess Result
+        /// </summary>
+        /// <param name="mailContainer"></param>
+        /// <param name="numberOfMailItems"></param>
+        /// <returns></returns>
         public bool IsSuccessfull(MailContainer mailContainer, int numberOfMailItems)
         {
             if (mailContainer == null)

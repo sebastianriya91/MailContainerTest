@@ -3,7 +3,7 @@ using MailContainerTest.Data;
 using MailContainerTest.Strategy;
 using MailContainerTest.Types;
 
-namespace MailContainer.Tests.Strategies
+namespace MailContainerTest.Tests.Strategies
 {
     public class StandardLetterMailProcessorTests
     {

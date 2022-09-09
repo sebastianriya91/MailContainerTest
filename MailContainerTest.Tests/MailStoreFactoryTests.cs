@@ -2,7 +2,7 @@ using MailContainerTest;
 using MailContainerTest.Data;
 using MailContainerTest.Types;
 
-namespace MailContainer.Tests
+namespace MailContainerTest.Tests
 {
     public class MailProcessorStrategyTests
     {

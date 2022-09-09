@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace MailContainerTest.Data
 {
+    /// <summary>
+    /// Container Data Store Contract definition
+    /// </summary>
     public interface IContainerDataStore
     {
         MailContainer GetMailContainer(string mailContainerNumber);

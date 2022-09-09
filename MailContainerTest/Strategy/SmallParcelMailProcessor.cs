@@ -9,6 +9,12 @@ namespace MailContainerTest.Strategy
 {
     public class SmallParcelMailProcessor: IMailProcessor
     {
+        /// <summary>
+        /// Processes Small Parcel mail and returns IsSuccess Result
+        /// </summary>
+        /// <param name="mailContainer"></param>
+        /// <param name="numberOfMailItems"></param>
+        /// <returns></returns>
         public bool IsSuccessfull(MailContainer mailContainer, int numberOfMailItems)
         {
             if (mailContainer == null)

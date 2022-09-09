@@ -13,17 +13,21 @@ namespace MailContainerTest.Strategy
     }
     public class MailProcessorStrategy : IMailProcessorStrategy
     {
-        // decides the mail Processor
+        /// <summary>
+        /// Based on the mail type, startegy decided which Processor to be used. So that the service can cal the respective Process Method
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public IMailProcessor GetMailProcessor(MailType type)
         {
-            switch (type)
+            return type switch
             {
-                case MailType.StandardLetter: return new StandardLetterMailProcessor();
-                case MailType.LargeLetter: return new LargeLetterMailProcessor();
-                case MailType.SmallParcel: return new SmallParcelMailProcessor();
-                default:
-                    throw new ArgumentException("Invalid type");
-            }
+                MailType.StandardLetter => new StandardLetterMailProcessor(),
+                MailType.LargeLetter => new LargeLetterMailProcessor(),
+                MailType.SmallParcel => new SmallParcelMailProcessor(),
+                _ => throw new ArgumentException("Invalid type"),
+            };
         }
     }
 }

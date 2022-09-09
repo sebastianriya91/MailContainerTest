@@ -14,6 +14,11 @@ namespace MailContainerTest
     }
     public class MailStoreFactory: IMailStoreFactory
     {
+        /// <summary>
+        /// Based on the store type passed by the service, factory decides the type of container store. Input in [Backup, Main]
+        /// </summary>
+        /// <param name="dataStoreType"></param>
+        /// <returns>IContainerDataStore</returns>
         public IContainerDataStore CreateMailDataStore(StoreType dataStoreType)
         {
             if (dataStoreType == StoreType.Backup)

@@ -4,7 +4,7 @@ using MailContainerTest.Strategy;
 using MailContainerTest.Types;
 using System.Configuration;
 
-namespace MailContainer.Tests
+namespace MailContainerTest.Tests
 {
     public class MailTransferServiceTests
     {
